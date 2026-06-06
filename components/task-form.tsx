@@ -232,7 +232,7 @@ export default function TaskForm({ initialTask }: TaskFormProps) {
     <div className="space-y-3">
       <form
         onSubmit={handleSubmit}
-        className="rounded-xl overflow-hidden"
+        className="rounded-xl overflow-visible"
         style={{
           border: `1px solid ${isFocused ? "var(--tf-border-hover)" : "var(--tf-border)"}`,
           background: "var(--tf-surface)",
