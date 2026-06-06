@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+/* ─── Light Mode Tokens ────────────────────────────────────── */
+:root {
+  --tf-red:          #db4035;
+  --tf-red-hover:    #c73a30;
+  --tf-red-light:    #fef2f1;
+
+  --tf-bg:           #fafafa;
+  --tf-surface:      #ffffff;
+  --tf-surface-2:    #f6f6f6;
+  --tf-border:       #e5e5e5;
+  --tf-border-hover: #d0d0d0;
+
+  --tf-text:         #202020;
+  --tf-text-muted:   #6b6b6b;
+  --tf-text-faint:   #aaaaaa;
+
+  --tf-green:        #2d9e2d;
+  --tf-green-light:  #f0faf0;
+
+  --tf-amber:        #d97706;
+  --tf-amber-light:  #fffbeb;
+
+  --tf-blue:         #2563eb;
+  --tf-blue-light:   #eff6ff;
+
+  --tf-shadow:       0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+  --tf-shadow-md:    0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -2px rgba(0,0,0,0.05);
+}
+
+/* ─── Dark Mode Tokens ─────────────────────────────────────── */
+.dark {
+  --tf-red:          #ff6b6b;
+  --tf-red-hover:    #ff5252;
+  --tf-red-light:    rgba(255,107,107,0.12);
+
+  --tf-bg:           #111111;
+  --tf-surface:      #1a1a1a;
+  --tf-surface-2:    #222222;
+  --tf-border:       #2a2a2a;
+  --tf-border-hover: #3a3a3a;
+
+  --tf-text:         #f0f0f0;
+  --tf-text-muted:   #888888;
+  --tf-text-faint:   #555555;
+
+  --tf-green:        #4ade80;
+  --tf-green-light:  rgba(74,222,128,0.1);
+
+  --tf-amber:        #fbbf24;
+  --tf-amber-light:  rgba(251,191,36,0.1);
+
+  --tf-blue:         #60a5fa;
+  --tf-blue-light:   rgba(96,165,250,0.1);
+
+  --tf-shadow:       0 1px 3px rgba(0,0,0,0.4), 0 1px 2px rgba(0,0,0,0.3);
+  --tf-shadow-md:    0 4px 6px -1px rgba(0,0,0,0.5), 0 2px 4px -2px rgba(0,0,0,0.4);
+}
+
+/* ─── Base ─────────────────────────────────────────────────── */
+html {
+  font-size: 15px;
+  color-scheme: light;
+}
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--tf-bg);
+  color: var(--tf-text);
+  font-family: var(--font-geist-sans), "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────────── */
+::-webkit-scrollbar        { width: 5px; height: 5px; }
+::-webkit-scrollbar-track  { background: transparent; }
+::-webkit-scrollbar-thumb  { background: var(--tf-border); border-radius: 99px; }
+
+/* ─── Transition helper ─────────────────────────────────────── */
+*, *::before, *::after {
+  transition-property: background-color, border-color, color, opacity;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+/* Dashboard sidebar nav links */
+nav a {
+  transition: background 0.15s ease, color 0.15s ease;
+}
+nav a:hover {
+  background: var(--tf-surface-2);
+  color: var(--tf-text) !important;
+}
